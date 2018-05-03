@@ -52,22 +52,27 @@ const kata20 = () => {
     let lord = JSON.stringify(lotrCitiesArray).split(",")
     return lord.filter(city => /or/.test(city)).join(", ")
 }
-//const kata21 
+const kata21 = () => {
+    let bWord = JSON.stringify(bestThing).split(" ")
+    return bWord.filter(word => /b/.test(word)).join(", ")
+
+}
 const kata22 = () => JSON.stringify(lotrCitiesArray).includes("Mirkwood") ? "yes" : "no";
 const kata23 = () => JSON.stringify(lotrCitiesArray).includes("Hollywood") ? "yes" : "no";
 const kata24 = () => lotrCitiesArray.indexOf("Mirkwood")
-/*const kata25 = () => {
-    let lords = lotrCitiesArray.split(",")
-    return lords.filter(city => /\s/.match(city)).join(" ")
-}*/
+const kata25 = () => {
+    let lords = lotrCitiesArray
+    return lords.filter(city => /\s/.test(city)).join(" ")
+}
 const kata26 = () => lotrCitiesArray.reverse();
 const kata27 = () => lotrCitiesArray.sort();
-function kata28(){
+/*function kata28(){
     lotrCitiesArray.forEach(function (city){
         let 
     });
 
-}
+}*/
+const kata29 = () => lotrCitiesArray.
 
 
 
@@ -91,14 +96,14 @@ append('17. Find and display the index of "only" in bestThing ', kata17())
 append('18. Find and display the index of the last word in bestThing', kata18())
 append('19. Find and display all cities from gotCitiesCSV that use double vowels ("aa","ee",ect.)', kata19())
 append('20. Find and display all cities from lotrCitiesArray that end with "or"', kata20())
-//append('21. Find and display all the words in bestThing that start with a "b"', kata21())
+append('21. Find and display all the words in bestThing that start with a "b"', kata21())
 append('22. Display "Yes" or "No" if lotrCitiesArray includes "Mirkwood"', kata22())
 append('23. Display "Yes" or "No" if lotrCitiesArray includes "Hollywood"', kata23())
 append('24. Display the index of "Mirkwood" in lotrCitiesArray', kata24())
-//append('25. Find and display the first city in lotrCitiesArray that has more than one word', kata25())
+append('25. Find and display the first city in lotrCitiesArray that has more than one word', kata25())
 append('26. Reverse the order in lotrCitiesArray', kata26())
 append('27. Sort lotrCitiesArray alphabetically', kata27())
-append('28. Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)', kata28())
+//append('28. Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)', kata28())
 append('29. Using pop, remove the last city from lotrCitiesArray', kata29())
 append('30. Using push, add back the city from lotrCitiesArray that was removed in #29 to the back of the array', kata30())
 append('31. Using shift, remove the first city from lotrCitiesArray', kata31())
