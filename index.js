@@ -16,44 +16,58 @@ const bestThing = "The best thing about a boolean is even if you are wrong you a
 
 const kata1 = () => JSON.stringify(gotCitiesCSV.split(","))
 const kata2 = () => JSON.stringify(bestThing.split(" "))
-const kata3 = () => JSON.stringify(gotCitiesCSV.split(",").join(";"))
+const kata3 = () => JSON.stringify(gotCitiesCSV.split(",").join("; "))
 const kata4 = () => JSON.stringify(lotrCitiesArray.slice().toString())
-const kata5 = () => JSON.stringify(lotrCitiesArray.slice(0, 5).toString())
-const kata6 = () => JSON.stringify(lotrCitiesArray.slice(-5).toString())
-const kata7 = () => JSON.stringify(lotrCitiesArray.slice(2, 5).toString())
+const kata5 = () => JSON.stringify(lotrCitiesArray.slice(0, 5))
+const kata6 = () => JSON.stringify(lotrCitiesArray.slice(-5))
+const kata7 = () => JSON.stringify(lotrCitiesArray.slice(2, 5))
 const kata8 = () => {
-    JSON.stringify(lotrCitiesArray.splice(2, 1).toString())
-    return lotrCitiesArray;
+    JSON.stringify(lotrCitiesArray.splice(2, 1))
+    return lotrCitiesArray.join(", ");
 }
 const kata9 = () => {
-    JSON.stringify(lotrCitiesArray.splice(4,3).toString())
-    return lotrCitiesArray;
+    JSON.stringify(lotrCitiesArray.splice(4, 3))
+    return lotrCitiesArray.join(", ");
 }
 const kata10 = () => {
-    JSON.stringify(lotrCitiesArray.splice(2,1,'Rohan').toString())
-    return lotrCitiesArray;
+    JSON.stringify(lotrCitiesArray.splice(2, 1, 'Rohan'))
+    return lotrCitiesArray.join(", ");
 }
 const kata11 = () => {
-    JSON.stringify(lotrCitiesArray.splice(4,0,'Deadlest Marshes').toString())
-    return lotrCitiesArray;
+    JSON.stringify(lotrCitiesArray.splice(4, 0, 'Deadlest Marshes'))
+    return lotrCitiesArray.join(", ");
 }
-const kata12 = () => JSON.stringify(bestThing).slice(1,15)
+const kata12 = () => JSON.stringify(bestThing).slice(1, 15)
 const kata13 = () => JSON.stringify(bestThing).slice(-13)
-const kata14 = () => JSON.stringify(bestThing).slice(23,38)
-const kata15 = () => JSON.stringify(bestThing).substring(1,15)
-const kata16 = () => JSON.stringify(bestThing).substring(23,38)
+const kata14 = () => JSON.stringify(bestThing).slice(23, 38)
+const kata15 = () => JSON.stringify(bestThing).substring(1, 15)
+const kata16 = () => JSON.stringify(bestThing).substring(23, 38)
 const kata17 = () => JSON.stringify(bestThing).indexOf("only")
-const kata18 = () => JSON.stringify(bestThing).lastIndexOf()
+const kata18 = () => JSON.stringify(bestThing).lastIndexOf("bit")
 const kata19 = () => {
-    JSON.stringify(gotCitiesCSV.split(","))
-         if(gotCitiesCSV.includes("aa","ee")){
-          return gotCitiesCSV===true;
-         }
-
+    let thrones = gotCitiesCSV.split(",")
+    return thrones.filter(city => /(aa|ii|ee|uu|oo)/.test(city)).join(", ")
+}
+const kata20 = () => {
+    let lord = JSON.stringify(lotrCitiesArray).split(",")
+    return lord.filter(city => /or/.test(city)).join(", ")
+}
+//const kata21 
+const kata22 = () => JSON.stringify(lotrCitiesArray).includes("Mirkwood") ? "yes" : "no";
+const kata23 = () => JSON.stringify(lotrCitiesArray).includes("Hollywood") ? "yes" : "no";
+const kata24 = () => lotrCitiesArray.indexOf("Mirkwood")
+/*const kata25 = () => {
+    let lords = lotrCitiesArray.split(",")
+    return lords.filter(city => /\s/.match(city)).join(" ")
+}*/
+const kata26 = () => lotrCitiesArray.reverse();
+const kata27 = () => lotrCitiesArray.sort();
+function kata28(){
+    lotrCitiesArray.forEach(function (city){
+        let 
+    });
 
 }
-const kata20 = () => JSON.stringify(lotrCitiesArray)
-
 
 
 
@@ -77,11 +91,11 @@ append('17. Find and display the index of "only" in bestThing ', kata17())
 append('18. Find and display the index of the last word in bestThing', kata18())
 append('19. Find and display all cities from gotCitiesCSV that use double vowels ("aa","ee",ect.)', kata19())
 append('20. Find and display all cities from lotrCitiesArray that end with "or"', kata20())
-append('21. Find and display all the words in bestThing that start with a "b"', kata21())
+//append('21. Find and display all the words in bestThing that start with a "b"', kata21())
 append('22. Display "Yes" or "No" if lotrCitiesArray includes "Mirkwood"', kata22())
 append('23. Display "Yes" or "No" if lotrCitiesArray includes "Hollywood"', kata23())
 append('24. Display the index of "Mirkwood" in lotrCitiesArray', kata24())
-append('25. Find and display the first city in lotrCitiesArray that has more than one word', kata25())
+//append('25. Find and display the first city in lotrCitiesArray that has more than one word', kata25())
 append('26. Reverse the order in lotrCitiesArray', kata26())
 append('27. Sort lotrCitiesArray alphabetically', kata27())
 append('28. Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)', kata28())
