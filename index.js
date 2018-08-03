@@ -30,7 +30,7 @@ const kata9 = () => {
     return lotrCitiesArray.join(", ");
 }
 const kata10 = () => {
-    JSON.stringify(lotrCitiesArray.splice(2, 1, 'Rohan'))
+    JSON.stringify(lotrCitiesArray.splice(1, 1, 'Rohan'))
     return lotrCitiesArray.join(", ");
 }
 const kata11 = () => {
@@ -66,15 +66,31 @@ const kata25 = () => {
 }
 const kata26 = () => lotrCitiesArray.reverse();
 const kata27 = () => lotrCitiesArray.sort();
-/*function kata28(){
-    lotrCitiesArray.forEach(function (city){
-        let 
-    });
+const kata28 = () => {
+                    lotrCitiesArray.sort(function (a, b){
+                        return a.length - b.length
+                    })
+                    return lotrCitiesArray;
+}
 
-}*/
-const kata29 = () => lotrCitiesArray.
-
-
+const last =lotrCitiesArray.pop()
+const kata29 = () => {
+   
+    return last;
+}
+const kata30 = () => {
+    const push = lotrCitiesArray.push(last);
+        return lotrCitiesArray;
+    }
+    const shifted = lotrCitiesArray.shift()
+    const kata31 = () =>{
+    return shifted;
+}
+const kata32 =() =>{
+    
+    lotrCitiesArray.push(shifted)
+    return lotrCitiesArray;
+}
 
 append('1. Display an array from the cities in gotCitiesCSV', kata1())
 append('2. Display an array of words from the sentence in bestThing', kata2())
@@ -103,7 +119,7 @@ append('24. Display the index of "Mirkwood" in lotrCitiesArray', kata24())
 append('25. Find and display the first city in lotrCitiesArray that has more than one word', kata25())
 append('26. Reverse the order in lotrCitiesArray', kata26())
 append('27. Sort lotrCitiesArray alphabetically', kata27())
-//append('28. Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)', kata28())
+append('28. Sort lotrCitiesArray by the number of characters in each city (i.e., shortest city names go first)', kata28())
 append('29. Using pop, remove the last city from lotrCitiesArray', kata29())
 append('30. Using push, add back the city from lotrCitiesArray that was removed in #29 to the back of the array', kata30())
 append('31. Using shift, remove the first city from lotrCitiesArray', kata31())
